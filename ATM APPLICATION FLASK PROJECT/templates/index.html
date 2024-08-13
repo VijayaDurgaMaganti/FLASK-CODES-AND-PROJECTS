@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ATM APPLICATION USING FLASK</title>
+
+</head>
+
+<body>
+    <div class="bagckground">
+        <center>
+            <h1 style="color:aquamarine">WELCOME TO ATM APPLICATION</h1>
+            <p>It is user friendly application where you can save your amount eventually deposit or withdraw or even
+                check
+                your balance</p>
+        </center>
+        <center>
+            <form method="post" action="{{url_for('index')}}">
+                <label>Create account &nbsp;&nbsp;</label>
+                <input type="number" name="accno" placeholder="enter account number" />
+                &nbsp;&nbsp;
+                <input type="number" name="pinno" placeholder="enter pin" />
+                <br /><br />
+                <label>Balance &nbsp;&nbsp;</label>
+                <input type="number" name="balance" placeholder="show account balance" />
+                &nbsp;&nbsp;
+
+                <br /><br />
+                <center><button>Submit</button></center>
+
+            </form>
+
+            <br />
+            <a href="{{url_for('alreadyacc')}}" <button>Already have an Account</button></a>
+    </div>
+    </center>
+</body>
+
+</html>

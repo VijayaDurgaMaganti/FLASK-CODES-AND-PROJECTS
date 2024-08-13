@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LOGIN PAGE</title>
+    <style>
+        .blue {
+            color: blueviolet;
+        }
+
+        .container {
+            background-size: cover;
+            background-image: url('https://images.ctfassets.net/hrltx12pl8hq/28ECAQiPJZ78hxatLTa7Ts/2f695d869736ae3b0de3e56ceaca3958/free-nature-images.jpg?fit=fill&w=1200&h=630');
+            width: 100vw;
+            height: 100vh;
+
+        }
+    </style>
+</head>
+
+<body>
+    <center>
+        <div class="container">
+            <h1 class="blue">
+                LOGIN PAGE </h1>
+            <form method="post" action="{{url_for('alreadyacc')}}">
+                <label> Enter your account number &nbsp;&nbsp;</label>
+                <input type="number" name="accno" placeholder="enter account number" />
+                &nbsp;&nbsp;<br /><br />
+                <label> Enter you pin number &nbsp;&nbsp;</label>
+                <input type="number" name="pinno" placeholder="enter pin" />
+                <br /><br />
+                <center><button>Submit</button></center>
+
+            </form>
+
+            <br />
+            <a href="{{url_for('alreadyacc')}}"><button>Already have an Account</button></a>
+        </div>
+        </div>
+    </center>
+
+</body>
+
+</html>

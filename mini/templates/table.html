@@ -1,0 +1,25 @@
+{% extends 'panel.html' %}
+{% block content %}
+<table>
+    <thead>
+        <tr>
+            <th>Notesid</th>
+            <th>Title</th>
+            <th>Created_at</th>
+            <th>Link</th>
+        </tr>
+    </thead>
+    <tbody>
+        {% for i in data %}
+        <tr>
+            <td>{{i[0]}}</td>
+            <td>{{i[1]}}</td>
+            <td>{{i[2]}}</td>
+            <td><a href="{{url_for('viewnotes',nid=i[0])}}">View</a></td>
+            <td><a href="{{url_for('updatenotes',nid=i[0])}}">Update</a></td>
+            <td><a href="{{url_for('deletenotes',nid=i[0])}}">Delete</a></td>
+        </tr>
+        {% endfor %}
+    </tbody>
+</table>
+{% endblock content %}

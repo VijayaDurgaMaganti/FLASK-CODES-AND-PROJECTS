@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ATM_Application</title>
+    <style>
+        div h1 {
+            color: "red";
+        }
+
+        .button {
+            background-color: "red";
+        }
+    </style>
+</head>
+
+<body>
+    <div>
+        <center>
+            <h1 style="color:red">Welcome to SBI Atm</h1>
+            <p>It is an User Friendly Application Where You can Save Your Amount Eventually you can withdraw money and
+                deposit also.</p>
+            <form method="POST" action="{{url_for('index')}}">
+                <label>Create Account</label><br><br>
+                <input type="number" name="accno" placeholder="enter account no"><br><br>
+                <input type="number" name="pinno" placeholder="enter pin no"><br><br>
+                <button>Submit</button>
+            </form>
+            <a href="{{url_for('alreadyacc')}}"><button>Already Have An Account</button></a>
+        </center>
+    </div>
+</body>
+
+</html>

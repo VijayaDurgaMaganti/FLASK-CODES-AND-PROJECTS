@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .buttons button {
+            color: white;
+            font-size: 15px;
+            border: none;
+            width: 100px;
+            height: 30px;
+        }
+    </style>
+</head>
+
+<body>
+    <center>
+        <h2><b>Choose Your Option:</b></h2>
+        <div class="buttons">
+            <a href="{{url_for('deposite',accno=accno,pinno=pinno)}}"><button
+                    style="background-color: blue;">Deposit</button></a>
+            <a href="{{url_for('withdraw',accno=accno,pinno=pinno)}}"><button style=" background-color:
+                red;">Withdraw</button></a>
+            <a href="{{url_for('balance',accno=accno,pinno=pinno)}}">
+                <button style="background-color: green;">Balance</button></a>
+        </div>
+    </center>
+</body>
+
+</html>

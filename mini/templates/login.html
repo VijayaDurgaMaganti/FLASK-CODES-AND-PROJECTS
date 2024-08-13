@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login_Page</title>
+    <style>
+        h1 {
+            color: crimson;
+            margin: 10%;
+        }
+
+        div {
+            width: 27%;
+            height: 50%;
+            border: 1px solid black;
+            border-radius: 20px;
+            margin: 15%;
+        }
+
+        label1 {
+            font-weight: bold;
+            margin-left: 5px;
+        }
+
+        .input1 {
+            border-radius: 13px;
+            padding: 5px;
+            width: 50%;
+        }
+
+        .btn1 {
+            width: 80px;
+            height: 30px;
+            color: white;
+            font-size: 17px;
+            font-weight: bold;
+            background-color: crimson;
+            margin-left: 2%;
+            margin-bottom: 10%;
+
+            border: none;
+        }
+
+        .btn2 {
+            width: 80px;
+            height: 30px;
+            color: white;
+            font-size: 17px;
+            font-weight: bold;
+            background-color: green;
+            margin-left: 2%;
+            margin-bottom: 5%;
+            margin-top: 10%;
+            border: none;
+        }
+    </style>
+</head>
+{% with messages = get_flashed_messages() %}
+{% if messages %}
+{% for message in messages %}
+<center>{{ message }}</center>
+{% endfor %}
+{% endif %}
+{% endwith %}
+
+<body>
+    <center>
+        <div>
+            <h1>Login Form</h1>
+            <form method="post">
+
+                <p>
+                    <label>Enter Your Email: </label><br><br>
+                    <input class="input1" type="email" placeholder="YourName@gmail.com" name="email">
+                </p>
+                <p>
+                    <label>Enter Your Password: </label><br><br>
+                    <input class="input1" type="password" placeholder="****" name="password">
+                </p>
+                <a href="page_info.html"><button class="btn1">Submit</button></a>
+                <a href="index.html"><button class="btn1">Back</button></a>
+
+
+                <!-- <button class="btn2"><a href="login.html">Back</a></button> -->
+            </form>
+        </div>
+    </center>
+</body>
+
+</html>
